@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+h1 {
+	text-decoration: underline;
+}
+
+</style>
+</head>
+	<body>
+	<h1> Your Upcoming Events </h1>
+	
+		{% for p in post %}
+		{{p['event']}} {{p['time']}} {{p['date']}} {{p['location']}}
+		
+	<br>
+	{% endfor %}
+	</body>
+
+</html>
