@@ -1,0 +1,44 @@
+<html>
+
+<body>
+<style>
+
+table,td {
+    border: 1px solid black;
+    width: 500px;
+    height: 20px;
+    box-sizing: border-box;
+    overflow: clear;
+}
+
+</style>
+
+<form method="post" action="/">
+<table>
+<tr>
+  <td>
+   Name of Event:
+   <p><input type="text"  name="event" id = "event"></p>
+  </td>
+  <td> Time: 
+  <p><input type="text" name="time" id = "time"></p>
+  </td>
+  <td>
+   Date:
+   <p> <input type="text" name="date" id = "date"></p>
+  </td> 
+  <td> Location: 
+  <p> <input type="text" name="location" id = "location"></p> 
+  </td> 
+</tr>
+
+
+Final Event: <span id = "infoadded"></span>
+<input type = "submit" value = "Add Event" >
+
+</table>
+</form>
+
+
+</body>
+</html>
