@@ -1,7 +1,7 @@
 import webapp2
-import jinja2
 import os
- 
+import jinja2
+
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(
         os.path.dirname(__file__)))
@@ -17,7 +17,13 @@ class listevent(ndb.Model):
 	date = ndb.StringProperty()
 	location = ndb.StringProperty()
 
+#Calls the homepage template
 class MainHandler(webapp2.RequestHandler):
+HEAD
+    def get(self):
+        template = jinja_environment.get_template('homescreen.html')
+        self.response.write(template.render())
+
 	def get(self):
 
 			template = jinja_environment.get_template('schedule.html')
@@ -53,8 +59,6 @@ class EventHandler(webapp2.RequestHandler):
 				'post': eventlist
 
 			}))
-
-
 
 app = webapp2.WSGIApplication([
 	('/', MainHandler),
