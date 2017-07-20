@@ -21,7 +21,7 @@ class listprofile(ndb.Model):
 	height = ndb.StringProperty()
 	weight = ndb.StringProperty()
 
-class MainHandler(webapp2.RequestHandler):
+class InfoHandler(webapp2.RequestHandler):
 	def get(self):
 
 			template = jinja_environment.get_template('profile.html')
@@ -72,6 +72,6 @@ class ProfileHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-	('/', MainHandler),
+	('/', InfoHandler),
 	('/Profile', ProfileHandler),
 ],debug=True)
