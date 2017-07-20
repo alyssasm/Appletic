@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+h1{
+	text-align: center;
+	border:5px solid black;}
+body{ font-size: 30px; }
+html{background-color:#C1DEE5}
+</style>
+<h1>About Me</h1>
+</head>
+<body>
+
+{% for p in post %}
+ Name: {{p['name']}}<br>
+Sport: {{p['sport']}} <br>
+ Position:{{p['position']}} <br>
+School: {{p['school']}}<br>
+ Birthday: {{p['birthday']}}<br>
+ Age: {{p['age']}}<br>
+ Height: {{p['height']}}<br>
+ Weight: {{p['weight']}}<br>
+
+{% endfor %}
+</body>
+
+</html>
