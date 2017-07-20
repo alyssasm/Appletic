@@ -3,16 +3,23 @@
 <style>
 h1 {
 	text-decoration: underline;
+	text-align: center;
 }
 
 </style>
+
 </head>
-	<body>
+	<body style = "background-color: #ffe2ce" >
 	<h1> Your Upcoming Events </h1>
 	
-		{% for p in post %}
-		{{p['event']}} {{p['time']}} {{p['date']}} {{p['location']}}
-		
+	<h2 style="font-weight: normal;">	{% for p in post %}
+	
+		<div style = "border:1px solid green; "> Event: {{p['event']}} </div> 
+		Time: {{p['time']}} <br>
+		Date: {{p['date']}} <br>
+		Location: {{p['location']}}
+
+		</h2>
 	<br>
 	{% endfor %}
 	</body>
